@@ -1,0 +1,24 @@
+{
+  "name": "project-02-use-iterator",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "* joto toko data proyojon toto toko data niye aste hobe..\r * next e click korle data porborti data gula asbe ar ager data gula remove hoye jabe",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rayhanmujumdar/iterator-use-project-to-full-stack-army.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rayhanmujumdar/iterator-use-project-to-full-stack-army/issues"
+  },
+  "homepage": "https://github.com/rayhanmujumdar/iterator-use-project-to-full-stack-army#readme",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
