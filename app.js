@@ -9,17 +9,17 @@ let nextCount = 0;
 let prevCount = 0;
 async function* generateData() {
   const data = await getData();
-  let i = -1
-  while(++i < data.length){
-    const allData = await data[i]
-    yield allData.data
-    if(i === data.length - 1){
-        i = -1
+  let i = -1;
+  while (++i < data.length) {
+    const allData = await data[i];
+    yield allData.data;
+    if (i === data.length - 1) {
+      i = -1;
     }
   }
-//   for await (const v of data) {
-//     yield await v.data;
-//   }
+  //   for await (const v of data) {
+  //     yield await v.data;
+  //   }
 }
 
 async function* prevGenerateData() {
@@ -44,6 +44,7 @@ const nextData = generateData(nextCount);
   const { value: posts } = await nextData.next();
   content(posts);
 })();
+
 // Next btn click event
 nextBtn.addEventListener("click", async function () {
   dataContainer.innerHTML = "";
@@ -56,6 +57,7 @@ nextBtn.addEventListener("click", async function () {
     content(posts);
   }
 });
+
 // prev btn click event
 prevBtn.addEventListener("click", async () => {
   dataContainer.innerHTML = "";
@@ -69,6 +71,7 @@ prevBtn.addEventListener("click", async () => {
   }
 });
 
+// post title visible to html
 function content(posts) {
   posts?.forEach((post, index) => {
     const div = document.createElement("div");
